@@ -1,0 +1,625 @@
+
+/*!
+* Start Bootstrap - Resume v6.0.2 (https://startbootstrap.com/theme/resume)
+* Copyright 2013-2020 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
+*/
+/*!
+ * Bootstrap v4.5.3 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #bd5d38;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #bd5d38;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+    background: #fff;
+    color: #666666;
+}
+
+a {
+    color: #03C4EB;
+    transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #03c5ec;
+    outline: none;
+    text-decoration: none;
+}
+
+p {
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+/* Prelaoder */
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #000 url("../img/preloader.svg") no-repeat center center;
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    padding: 6px 12px 9px 12px;
+    font-size: 16px;
+    border-radius: 2px;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 15px;
+    }
+}
+
+.back-to-top:focus {
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    outline: none;
+}
+
+.back-to-top:hover {
+    background: #03C4EB;
+    color: #fff;
+}
+
+/*--------------------------------------------------------------
+  # Welcome
+  --------------------------------------------------------------*/
+
+#landingpage {
+    display: table;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/bg-masthead.jpg") top center;
+    background-size: cover;
+}
+
+@media (min-width: 1024px) {
+    #landingpage {
+        background-attachment: fixed;
+    }
+}
+
+#landingpage .landingpage-logo {
+    margin: 20px;
+  }
+  
+  #landingpage .landingpage-logo img {
+    max-width: 100%;
+  }
+
+
+#landingpage #landingpage-container {
+    background: rgba(0, 0, 0, 0.8);
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#landingpage h1 {
+    margin: 30px 0 10px 0;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    #landingpage h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+
+#landingpage h2 {
+    color: #999;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+    #landingpage h2 {
+        font-size: 24px;
+        line-height: 26px;
+        margin-bottom: 30px;
+    }
+    #landingpage h2 .rotating {
+        display: block;
+    }
+}
+
+#landingpage .rotating>.animated {
+    display: inline-block;
+}
+
+#landingpage .actions a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 2px;
+    transition: 0.5s;
+    margin: 10px;
+}
+
+#landingpage .btn-who-am-i {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+#landingpage .btn-who-am-i:hover {
+    background: #ffc107;
+    border: 2px solid #fff;
+}
+
+#landingpage .btn-what-i-do {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+#landingpage .btn-what-i-do:hover {
+    background: #03C4EB;
+    border: 2px solid #fff;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.heading {
+    background: #000;
+    padding: 20px 0;
+    height: 90px;
+}
+
+.heading #logo {
+    float: left;
+}
+
+.heading #logo h1 {
+    font-size: 36px;
+    margin: 0;
+    padding: 6px 0;
+    line-height: 1;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.heading #logo h1 a,.heading #logo h1 a:hover {
+    color: #fff;
+
+}
+
+.heading #logo img {
+    padding: 0;
+    margin: 0;
+    max-height: 50px;
+  }
+
+@media (max-width: 768px) {
+    .heading {
+        height: 80px;
+    }
+
+    .heading h1 {
+        font-size: 26px;
+    }
+    .heading #logo img {
+        max-height: 40px;
+    }
+}
+
+.is-sticky .heading {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Nav Menu Essentials */
+
+#menu, .menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#menu ul {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    z-index: 99;
+}
+
+#menu li {
+    position: relative;
+    white-space: nowrap;
+}
+
+#menu>li {
+    float: left;
+}
+
+#menu li:hover>ul,
+#menu li.sfHover>ul {
+    display: block;
+}
+
+#menu ul ul {
+    top: 0;
+    left: 100%;
+}
+
+#menu ul li {
+    min-width: 180px;
+}
+
+/* Nav Menu Arrows */
+.sf-arrows .sf-with-ul {
+    padding-right: 30px;
+}
+
+.sf-arrows .sf-with-ul:after {
+    content: "\f107";
+    position: absolute;
+    right: 15px;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+    content: "\f105";
+}
+
+
+/* Nav Menu Container */
+#navbar {
+    float: right;
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        display: none;
+    }
+}
+
+
+/* Nav Menu Styling */
+#menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    outline: none;
+}
+
+#menu a:hover, #menu li:hover>a, #menu .menu-active>a {
+    color: #d4eb03;
+}
+
+#menu ul {
+    margin: 4px 0 0 15px;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+#menu ul li {
+    background: #fff;
+    border-top: 1px solid #f4f4f4;
+}
+
+#menu ul li:first-child {
+    border-top: 0;
+}
+
+#menu ul li:hover {
+    background: #f6f6f6;
+}
+
+#menu ul li a {
+    color: #333;
+}
+
+#menu ul ul {
+    margin: 0;
+}
+
+/* Mobile Nav Toggle */
+#mobile-nav-toggle {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    margin: 20px 20px 0 0;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    display: none;
+    transition: all 0.4s;
+    outline: none;
+}
+
+#mobile-nav-toggle i {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    #mobile-nav-toggle {
+        display: inline;
+    }
+}
+
+/* Mobile Nav Styling */
+#mobile-nav {
+    position: fixed;
+    top: 0;
+    padding-top: 18px;
+    bottom: 0;
+    z-index: 998;
+    background: rgba(0, 0, 0, 0.9);
+    left: -260px;
+    width: 260px;
+    overflow-y: auto;
+    transition: 0.4s;
+}
+
+#mobile-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#mobile-nav ul li {
+    position: relative;
+}
+
+#mobile-nav ul li a {
+    color: #fff;
+    font-size: 16px;
+    overflow: hidden;
+    padding: 10px 22px 10px 15px;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    outline: none;
+}
+
+#mobile-nav ul li a:hover {
+    color: #fff;
+}
+
+#mobile-nav ul li li {
+    padding-left: 30px;
+}
+
+#mobile-nav ul .menu-has-children i {
+    position: absolute;
+    right: 0;
+    z-index: 99;
+    padding: 15px;
+    cursor: pointer;
+    color: #fff;
+}
+
+#mobile-nav ul .menu-has-children i.fa-chevron-up {
+    color: #03C4EB;
+}
+
+#mobile-nav ul .menu-item-active {
+    color: #03C4EB;
+}
+
+#mobile-body-overly {
+    width: 100%;
+    height: 100%;
+    z-index: 997;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+/* Mobile Nav body classes */
+body.mobile-nav-active {
+    overflow: hidden;
+}
+
+body.mobile-nav-active #mobile-nav {
+    left: 0;
+}
+
+body.mobile-nav-active #mobile-nav-toggle {
+    color: #fff;
+}
+
+/*--------------------------------------------------------------
+  # Sections
+  --------------------------------------------------------------*/
+/* Sections Common
+  --------------------------------*/
+.section-title {
+    font-size: 32px;
+    color: #111;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Get Started Section
+    --------------------------------*/
+#about {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/bg-masthead.jpg");
+    padding: 80px 0;
+}
+
+#about .about-img {
+    overflow: hidden;
+}
+
+#about .about-img img {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    #about .about-img {
+        height: auto;
+    }
+
+    #about .about-img img {
+        margin-left: 0;
+        padding-bottom: 30px;
+    }
+}
+
+#about .about-content {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/bg-masthead.jpg") fixed center center;
+    ;
+}
+
+#about .about-title {
+    color: #333;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+#about .about-text {
+    line-height: 26px;
+    margin-bottom: 15px;
+}
+
+#about .about-text:last-child {
+    margin-bottom: 0;
+}
+
+/* Services Section
+    --------------------------------*/
+#services {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/bg-masthead.jpg") fixed center center;
+    background-size: cover;
+    padding: 80px 0 60px 0;
+}
+
+#services .service-item {
+    margin-bottom: 20px;
+}
+
+
+#services .service-icon i {
+    color: #fff;
+    font-size: 24px;
+}
+
+#services .service-item:hover .service-icon {
+    background: #fff;
+}
+
+
+#services .service-title {
+    margin-left: 50;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+#services .service-title a {
+    color: #111;
+}
+
+#services .service-description {
+    margin-left: 80px;
+    line-height: 24px;
+}
+
+#portfolio {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/bg-masthead.jpg") fixed center center;
+    background-size: cover;
+    padding: 80px 0 60px 0;
+}
+
+#additional-skills {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/bg-masthead.jpg") fixed center center;
+    background-size: cover;
+    padding: 80px 0 60px 0;
+}
+
+#education {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/bg-masthead.jpg") fixed center center;
+    background-size: cover;
+    padding: 80px 0 60px 0;
+}
+
+.footer {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/bg-masthead.jpg") fixed center center;
+    background-size: cover;
+    padding: 80px 0 60px 0;
+}
+
+#certification {
+    background: url(../img/bg-masthead.jpg) top center;
+    background-size: cover;
+}
