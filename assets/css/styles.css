@@ -209,6 +209,16 @@ h6 {
     border: 2px solid #fff;
 }
 
+#landingpage .btn-view-cv {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+#landingpage .btn-view-cv:hover {
+    background: #ff2c07;
+    border: 2px solid #fff;
+}
+
 #landingpage .btn-what-i-do {
     border: 2px solid #fff;
     color: #fff;
